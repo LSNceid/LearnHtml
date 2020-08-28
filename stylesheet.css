@@ -1,0 +1,18 @@
+		body{
+			background-color:rgb(204, 204, 255);
+		}
+		h1{
+			color: gray;
+			text-decoration: underline;
+		}
+		p{
+			color:red;
+			background: white;
+		}
+		.GucciGangMember{
+			color:gold;
+		}
+		#GGM69{
+			font-style: italic;
+			color: green;
+		}
