@@ -1,8 +1,89 @@
-.half-width{
-	width: 50%;
-	background-color: red; 
+html, body{
+	font-family: Lucida Bright, Sans-serif;
+	margin: 0px;
+	background-image: url("images/video-game-posters-5.jpg");
+	background-size: cover;
+
 }
-#friends{
+header {
+	background-color: #026e02;
+	text-align: center;
+	height: 100vh;
+	border-bottom:30px solid #2e2e2e;
+}
+header h1 {
+	font-size: 90px;
+	color: white;
+}
+
+header img {
+	margin-top: 5%;
+	  border-radius: 35%;
+	  width:25%;
+	  height: auto;
+	  border: 15px solid #28242b;
+}
+
+.content{
+	/*background-color: #99c773;*/
+	border-right: 4px solid #2e2e2e;
+	border-left: 4px solid #2e2e2e;
+	max-width: 70%;
+	margin:0 auto;
+	background-color: #99c773;
+	padding: 20px 20px 0px 20px;
+}
+.content h2{
+	text-align: center;
+}
+.content p{
+	text-align: center;
+}
+.flexbox{
 	position: relative;
-	left:50%;
+	width: 100%;
+	display: flex;
+	left: 20px;
+}
+.flexbox .flex-items{
+	max-width: 50%;
+	flex-grow: 1;
+
+}
+
+
+.flexbox ul{
+	list-style: decimal;
+	padding: 0;
+	margin: 0;
+}
+
+img.large-img{
+	margin-top: 40px;
+	width: calc(100% + 40px);
+    left: -20px;
+    position: relative;
+    border-top: 4px solid #2e2e2e;
+    bottom: -4px;
+}
+
+#friends{
+	top: 0px;
+	right: 0px;
+}
+
+footer{
+	text-align: center;
+	background-color: #b8b8b8;
+	height: 50px;
+}
+footer ul{
+
+	margin: 0px;
+}
+footer ul li{
+	position: relative;
+	top: 15px;
+	display: inline-block;
+	margin: 0 5px;
 }
