@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Are you Cole?</title>
+	<link rel="stylesheet" type="text/css" href="coleForm.css">
+</head>
+<body>
+	<header>
+		<div>
+			<h1>Cole's Form</h1>
+			<p>Are you the one and only Cole Barker?</p>
+			<button type="button"><a href="#form">Find Out Now!</a></button>
+		</div>
+	</header>
+	<form id="form" method="POST" action="coleForm.php" target="_blank">
+		<div class="question">
+		<label for="name">Name:</label>
+		<input type="text" id="name" placeholder="Your Name" required><br><br>
+		</div>
+
+		<div class="question">
+		<label for="email">Email:</label>
+		<input type="email" id="email" required><br><br>
+		</div>
+
+		<div class="question">
+		<label for="birthday">Birthday:</label>
+		<input type="date" id="birthday" required><br><br>
+		</div>
+
+		<div class="question" id="color">
+		<h3>Whats your favorite color?</h3>
+		<input type="radio" value="red" name="color" id="red">
+		<label for="red">Red</label>
+		<input type="radio" value="blue" name="color" id="blue">
+		<label for="blue">Blue</label>
+		<input type="radio" value="orange" name="color" id="orange">
+		<label for="orange">Orange</label>
+		<input type="radio" value="green" name="color" id="green">
+		<label for="green">Green</label>
+		</div>
+
+		<button id="submitButton">Submit</button>
+	</form>
+</body>
+</html>
