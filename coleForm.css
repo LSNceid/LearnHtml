@@ -58,6 +58,7 @@ form .question input{
 	padding: 8px 10px;
 	font-size: 30px;
 	background-color: #f1f1f1;
+	border: 0px solid black;
 }
 #color{
 	position: relative;
