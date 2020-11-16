@@ -1,33 +1,173 @@
-body{
-	background: lightblue;
-	text-align: center;
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
 }
 
-.wrapper{
-	width:100%;
-	padding: 20px;
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+	height: 40%;
+	background: skyblue;
+}
+
+.grass{
+	height: 30%;
+	background: green;
+}
+.road{
+	background: gray;
+	border-top: 10px solid darkgray;
+	height: 30%;
+}
+.lines{
 	box-sizing: border-box;
+	position: absolute;
+	height: 0px;
+	top: 50%;
+	border: 5px dashed white;
+	width: 100%
+}
+/* ELEMENTS TO ANIMATE */
+
+.mario{
+	position: absolute;
+	left:0px;
+	top: -40px;
+	animation: drive 4s both infinite cubic-bezier(0,1.5,1,-.5),
+				jump 4s both 2.8s infinite linear;
+
+}
+.luigi{
+	position: absolute;
+	left: 0px;
+	top: 90px;
+	animation-name: drive;
+	animation-duration: 6s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.cloud{
+	position: absolute;
+}
+.cloud:nth-child(1){
+	width: 200px;
+	top: 120px;
+	opacity: 0.5;
+	animation: wind 80s linear infinite reverse;
+}
+.cloud:nth-child(2){
+	width: 300px;
+	top:0px;
+	animation: wind 50s linear infinite reverse;
+}
+.cloud:nth-child(3){
+	width: 90px;
+	top:35px;
+
+	animation: wind 50s linear 2.8s infinite reverse,
+				alex 120s linear infinite reverse;
+}
+.obama{
+	position: absolute;
+	top: -200px;
+	left: -40px;
+	animation: rotateAppear 100s linear infinite normal,
+				drive 120s linear infinite alternate;
+}
+.cole{
+	position: absolute;
+	height: 70px;
+	animation: wind 160s linear infinite alternate-reverse,
+				cole 30s linear infinite normal,
+				cole2 8s ease infinite alternate-reverse;
+}
+.adc{
+	position: absolute;
+	left: 50%;
+	bottom: -200px;
+	height: 200px;
+	animation: adc 20s linear infinite normal;
+}
+/* KEYFRAMES */
+
+@keyframes drive{
+
+	from{
+		left: -200px;
+
+	}
+
+	to{
+		left:2000px;
+	}
 }
 
-.circle{
-	width: 100px;
-	padding: 50px 0;
-	line-height: 0;
-	margin: 60px auto;
-	background: pink;
-	color: white;
-	border-radius: 50px;
-	cursor: pointer;
+@keyframes wind{
+	from{
+		left: -300px;
+	}
+	to{
+		left: 100%;
+	}
 }
 
-.circle:hover{
-	background: salmon;
+@keyframes jump{
+	0%{ top: 0px;
+	transform: rotateZ(0deg);
+	 }
+	12.5%{ top: -20px;
+	transform: rotateZ(30deg);
+	}
+	20%{transform: rotateZ(0deg)}
+	25%{ top: 0px; }
+	100%{top: 0px; }
 }
+@keyframes rotateAppear{
+	0%{opacity: 0}
+	39%{transform: rotateZ(0deg);}
+	40%{opacity: 1}
+	45%{opacity: 0;
+		transform: rotateZ(360deg);}
+	100%{opacity: 0}
 
-
-
-
-img{
-	/*transform: translate(200px, 200px) scale(.5,2) rotateZ(10deg);
-	*/
+}
+@keyframes cole{
+	0%{opacity: 0}
+	70%{opacity: 0}
+	71%{opacity: 1}
+	72%{opacity: 0}
+	100%{opacity: 0}
+}
+@keyframes cole2{
+	from{top:0;}
+	to{top: 80%;}
+}
+@keyframes alex{
+	0%{opacity: 0}
+	79%{opacity: 0}
+	80%{opacity: 1}
+	90%{opacity: 1}
+	91%{opacity: 0}
+	100%{opacity: 0}
+}
+@keyframes adc{
+	0%{opacity: 0;
+	transform: rotateX(90deg);}
+	1%{transform:  translateY(-200px)}
+	49%{opacity: 0;
+		transform: rotateX(90deg);}
+	50%{opacity: 1;
+	transform:  translateY(-200px)}
+	55%{transform: rotateX(0deg);}
+	60%{opacity: 1}
+	61%{opacity: 0;
+	transform: rotateX(90deg);}
+	99%{transform:  translateY(-200px)}
+	100%{opacity: 0;
+	transform: rotateX(90deg);}
 }
